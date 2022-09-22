@@ -1,18 +1,18 @@
 import { EnergyType } from '../Energy';
 import Archetype from './Archetype';
 
-class Neuromancer extends Archetype {
+class Necromancer extends Archetype {
   private _energyType: EnergyType;
   protected static instancias = 0;
 
   constructor(name:string) {
     super(name); // só se colocar no super o que esta nos parametros do construtorpai
     this._energyType = 'mana';
-    Neuromancer.instancias += 1;
+    Necromancer.instancias += 1;
   }
 
   static createdArchetypeInstances(): number {
-    return Neuromancer.instancias;
+    return Necromancer.instancias;
   }
 
   get energyType(): EnergyType {
@@ -20,4 +20,4 @@ class Neuromancer extends Archetype {
   }
 }
 
-export default Neuromancer;
+export default Necromancer;
