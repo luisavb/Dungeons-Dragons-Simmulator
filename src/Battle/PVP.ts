@@ -12,30 +12,12 @@ class PVP extends Battle {
   }
 
   // -- source: https://www.devmedia.com.br/while-e-do-while-lacos-de-repeticoes-estrutura-da-linguagem-parte-1/18870
-  // fight(): number {
-  //   let startFight = 0; 
-  //   while (this._player1.lifePoints !== -1 && this._player2.lifePoints !== -1) {
-  //     if (startFight === 0) {
-  //       this._player1.attack(this._player2);
-  //       startFight = 1;
-  //     } else {
-  //       this._player2.attack(this._player1);
-  //       startFight = 0;
-  //     }
-  //   }
-  //   return super.fight();
-  // }
-
   fight(): number {
-    let startFight = 0; 
-    while (this._player2.lifePoints !== -1 && this._player1.lifePoints !== -1) {
-      if (startFight === 0) {
-        this._player1.attack(this._player2);
-        startFight = 1;
-      } else {
-        this._player2.attack(this._player1);
-        startFight = 0;
-      }
+    // lutando até os dois perderem a vidaaaaaa
+    while (this._player2.lifePoints > -1 && this._player1.lifePoints > -1) {
+      this._player1.attack(this._player2);
+      this._player2.attack(this._player1);
+      // enquanto os dois players estiverem com vida, o while rodará o looping
     }
     return super.fight();
   }
